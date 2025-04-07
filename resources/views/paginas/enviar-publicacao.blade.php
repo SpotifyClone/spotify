@@ -119,18 +119,19 @@
 <div class="edit-box">
     <div class="image-placeholder"></div>
     <div class="form-container">
-        <form>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nome" required>
-            </div>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Podcast / Música" required>
-            </div>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Tempo" required>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
+    <form action="{{ route('publicar') }}" method="POST">
+    @csrf
+    <div class="input-group">
+        <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" name="musica_podcast" placeholder="Podcast / Música" required>
+    </div>
+    <div class="input-group">
+        <input type="number" class="form-control" name="tempo" placeholder="Tempo" required>
+    </div>
+    <button type="submit">Enviar</button>
+    </form>
     </div>
 </div>
 </div>

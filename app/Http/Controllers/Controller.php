@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+use Illuminate\Http\Request;
+use App\Models\PublicarPost;
+use Illuminate\Routing\Controller as BaseController;
+
+class Controller extends BaseController
 {
     //
 }

@@ -38,3 +38,9 @@ Route::get('/redef-email', function () {
 Route::get('/redef-senha', function () {
     return view('paginas/redefsenha');
 });
+
+use App\Http\Controllers\PublicacaoController;
+Route::post('/publicar', [PublicacaoController::class, 'store'])->name('publicar');
+
+use App\Http\Controllers\CadastroController;
+Route::post('/cadastro', [CadastroController::class, 'store'])->name('cadastro');
